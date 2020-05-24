@@ -3,6 +3,7 @@ package com.ubis.loginpreatice
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,10 +22,14 @@ class MainActivity : AppCompatActivity() {
 
             if ( getid == "admin@admin.com" && getpass == "qwer") {
                 Log.d("로그인확인", "관리자입니다.")
+                Toast.makeText(this, " 관리자 입니다.", Toast.LENGTH_SHORT).show()
             }
             else    {
                 Log.d("로그인확인", "로그인에 실패했습니다..")
+                Toast.makeText(this, " 로그인실패", Toast.LENGTH_SHORT).show()
             }
+
+
 //            else if( getid == "admin@admin.com") {
 //                Log.d("입력값 확인", "관리자 이메일임")
 //            }
